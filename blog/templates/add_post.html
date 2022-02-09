@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+create new post
+
+{% endblock title %}
+
+{% block content  %}
+
+<h4>App Post</h4>
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-secondary">add post </button>
+    </form>
+</div>
+
+{% endblock content  %}
